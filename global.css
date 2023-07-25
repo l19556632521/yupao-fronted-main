@@ -1,0 +1,10 @@
+.add-button {
+    position: fixed;
+    bottom: 473px;
+    width: 30px;
+    right: 12px;
+    height: 30px;
+    border-radius: 50%;
+    z-index: 100;
+}
+
