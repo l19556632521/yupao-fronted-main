@@ -56,7 +56,7 @@ const loadData = async () => {
       params: {
         currentId:currentID.value,
         pageSize: 10,
-        pageNum: pageNum,
+        pageNum: 1,
       },
     })
         .then(function (response) {

@@ -1,20 +1,5 @@
 <template>
   <van-skeleton title avatar :row="3" :loading="props.loading" v-for="user in props.userList">
-    <!-- <van-card
-        :desc="'个人简介：' + user.profile"
-        :title="`${user.username}`"
-        :thumb="user.avatarUrl"
-    >
-      <template #tags>
-        <van-tag plain type="danger" v-for="tag in user.tags" style="margin-right: 8px; margin-top: 8px">
-          {{ tag }}
-        </van-tag>
-      </template>
-      <template #footer>
-        <van-button size="mini">看看我</van-button>
-      </template>
-    </van-card> -->
-
     <van-swipe-cell>
       <van-card v-if="user"
           :desc="user.profile ?'个人简介：'+ user.profile:'个人简介：该用户未设置'"
@@ -22,7 +7,6 @@
           :title="user.username"
           @click="showUser(user?.id)"
       >
-
         <template #tags>
           <div v-if="user.tags.length<7" style="margin-bottom: 12px"></div>
           标签：<br>
@@ -40,13 +24,9 @@
 <script setup lang="ts">
 import {UserType} from "../models/user";
 import {useRouter} from "vue-router";
-import { onMounted, ref } from "vue";
-
 
 const router = useRouter()
 const defaultPicture = "https://img.qimuu.icu/typory/teamImg1.jpg"
-const users = ref<UserType[]>([])
-
 
 interface UserCardListProps {
   loading: boolean;
@@ -61,21 +41,11 @@ const props = withDefaults(defineProps<UserCardListProps>(), {
 });
 
 /**
- * 查看用户
+ * 查看用户详细信息
  * @param id 
  */
-// const showUser = (id: number) => {
-//   router.push({
-//     // path: '/get',
-//     path: `/user/get/${id}`,
-//     // path: '/user/get/' + id ,
-//     // query: {
-//     //   id
-//     // }
-//   })
-// }
-
-const showUser = (id) => {
+//路由配置
+const showUser = (id:number) => {
     router.push({
         path: "/user/get",
         query: {
@@ -83,8 +53,6 @@ const showUser = (id) => {
         }
     })
 }
-
-
 
 </script>
 
