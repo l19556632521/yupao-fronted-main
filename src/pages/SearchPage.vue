@@ -106,7 +106,7 @@ const updateTag = async () => {
 }
 
 onMounted(() => {
-  const {id, tags} = route.query
+  const {id, tags} = route.query;
   if (id && tags) {
     userId.value = id;
     userTags.value = tags

@@ -16,7 +16,7 @@ import TeamUpdatePage from "../pages/TeamUpdatePage.vue";
 
 
 const routes = [
-    { path: '/', component: Index },
+    { path: '/', title: '主页',component: Index },
     { path: '/team', title: '寻找队伍', component: Team },
     { path: '/team/add', title: '创建队伍', component: TeamAddPage },
     { path: '/team/update', title: '更新队伍', component: TeamUpdatePage },

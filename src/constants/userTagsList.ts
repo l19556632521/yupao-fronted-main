@@ -34,11 +34,12 @@ export default userTagsList = [{
     text: '选手方向',
     children: [
       {text: 'Java', id: 'Java'},
-      {text: 'C++', id: '大C++二'},
+      {text: 'C++', id: 'C++'},
       {text: 'Python', id: 'Python'},
       {text: '嵌入式', id: '嵌入式'},
       {text: '人工智能', id: '人工智能'},
       {text: '前端', id: '前端'},
+      {text: 'C', id: 'C'},
     ],
   },
   {
